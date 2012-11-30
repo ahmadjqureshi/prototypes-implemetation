@@ -1,0 +1,102 @@
+Table:1
+
+CREATE TABLE AccountInfo(
+			Account varchar2(12) , 
+			AccountTitle varchar2(256) , 
+			CapturedDate varchar2(20) , 
+			CompanyName varchar2(256) , 
+			AccountDetails varchar2(1000), 
+			AccountStatus varchar2(25) Not Null, 
+			CapturedBy varchar(256),
+			LastModifiedByIP varchar2(15),
+			LastVerifiedByIP varchar2(15),
+			Constraint Account_PK Primary Key(Account)
+			);
+
+Table:2
+
+Create Table Signatories(
+			SigId number(4) Not Null,
+			Account varchar2(12),
+			Signatoryname varchar2(25),
+			expiryDate varchar2(12),
+			CosigneeReq number(1),
+			limit number(10),
+			Grp varchar2(1),
+			SignatoryStatus varchar2(25), 
+			Constraint Account_FK Foreign Key(Account) References 			AccountInfo(Account),
+			Constraint Primary_Key Primary Key(SigId,Account)
+			);
+
+
+Table:3
+
+Create Table SigSign1(  
+			SigId number(4),
+			Account varchar2(12),
+			sign1 BFile,
+			sizeSign1 number(10)
+			);
+
+Table:4
+
+Create Table SigSign2(  
+			SigId number(4),
+			Account varchar2(12),
+			sign2 BFile,
+			SizeSign2 number(10)
+			);
+
+Table:5
+
+Create Table SigThumb(  
+			SigId number(4),
+			Account varchar2(12),
+			ThumbImp BFile,
+			sizeThumb number(10)
+			);
+
+Table:6
+
+Create Table SigPhoto(  
+			SigId number(4),
+			Account varchar2(12),
+			Photo BFile,
+			SizePhoto number(10)
+			);
+
+
+
+Create Table CrossReferences	(
+				Account varchar2(12),
+				RowNumber number(2),
+				Group1 varchar2(1),
+				Group2 varchar2(1),
+				Group3 varchar2(1),
+				Group4 varchar2(1),
+				Group5 varchar2(1),
+				Group6 varchar2(1),
+				Limit  varchar2(10),
+				Constraint CR_Primary_Key Primary Key(Account,RowNumber)
+				);
+
+
+
+
+Create Table UserRights(
+		UserID number(4),
+		UserName varchar2(256),
+		DomainName varchar2(256),
+		Capture number(1),
+		Modi number(1),
+		verify number(1)		
+	);
+
+
+
+
+create table featuresofsig(Account Varchar(12) Not Null,SigId number(4) Not Null,SigNum 					number(10),sign BFile,sizeSign number(10),No_End_Points 						Varchar(10),HWRatio varchar(10),No_Patterns varchar(10),
+			NormalizedRatio varchar(10),passed varchar(1));
+
+
+Create table PatternNormalizedArea(Account Varchar(12) Not Null,SigId number(4) Not Null,SigNum Number(10),PatternNo number(10),NormalizedRatio Varchar(10));
