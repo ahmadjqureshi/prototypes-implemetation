@@ -1,6 +1,6 @@
 #summary Overview of this project
 = Introduction =
 
-The purpose this project is to implement and demonstrate path finding algorithms e.g. Dijkstra, A^`*`^, best first search etc. It also contains an image processing project which was implemented some years before for extraction of features from handwritten signatures.
+The purpose this project is to implement and demonstrate path finding algorithms e.g. Dijkstra, A^*^, best first search etc. It also contains an image processing project which was implemented some years before for extraction of features from handwritten signatures.
 
 [shortestpathalgo Shortest Path Algorithm based on Dijkstra's algorithm]
