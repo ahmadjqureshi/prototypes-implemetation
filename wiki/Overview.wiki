@@ -15,12 +15,4 @@ It finds all possible paths in a graph and generates a tree of path. When tree o
 
 In the implementation the graph is constructed from collection of Edges. Each Edge consists of two Vertices i.e. start vertex and end vertex. Each Edge has weight.
 
-The graph can be defined in a definition file in following format in the form of integers, float not supported yet:
-
-TotalNumberOfEdges
-StartVertexId EndVertexId WeightOfEdge
-StartVertexId EndVertexId WeightOfEdge
-.
-.
-.
-
+The graph can be defined in a definition file. Please review graph.txt in source of shortestpathalgo.
