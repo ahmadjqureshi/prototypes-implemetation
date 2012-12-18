@@ -12,3 +12,15 @@ The purpose this project is to implement and demonstrate path finding algorithms
 The implementation of Shortest path algorithm is based on Dijkstra's algorithm with some modifications.
 
 It finds all possible paths in a graph and generates a tree of path. When tree of all paths is created then it is possible to do a bottom up traversal to get all paths.
+
+In the implementation the graph is constructed from collection of Edges. Each Edge consists of two Vertices i.e. start vertex and end vertex. Each Edge has weight.
+
+The graph can be defined in a definition file in following format in the form of integers, float not supported yet:
+
+TotalNumberOfEdges
+StartVertexId EndVertexId WeightOfEdge
+StartVertexId EndVertexId WeightOfEdge
+.
+.
+.
+
