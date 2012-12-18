@@ -1,4 +1,4 @@
-#Shortest path algorithm description.
+#Summary Shortest path algorithm description.
 
 =Shortest Path Algorithm=
 
