@@ -1,4 +1,4 @@
-
+#summary Shortest Path Algorithm description
 =Shortest Path Algorithm=
 
 The implementation of Shortest path algorithm is based on Dijkstra's algorithm with some modifications for example it takes care of circular references or paths in a graph.
