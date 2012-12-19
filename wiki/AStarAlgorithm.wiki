@@ -13,9 +13,4 @@ h(n) is the heuristic value from n to goal
 
 A^*^ is an extended version of Shortest path algorithm with addition of heuristic function h(n)
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+An implementation of A^*^ algorithm can be found [http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2FA*%20Algorithm%253Fstate%253Dclosed here]
