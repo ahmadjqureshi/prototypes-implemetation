@@ -1,5 +1,5 @@
 #summary Description of A* Algorithm
-#labels Phase-Implementation,Phase-Design
+#labels Phase-Implementation,Phase-Design,Featured
 
 = A^*^ Algorithm =
 
