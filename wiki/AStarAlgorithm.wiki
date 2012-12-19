@@ -1,4 +1,4 @@
-#Description of A* Algorithm
+#summary Description of A* Algorithm
 
 = A^*^ Algorithm =
 
