@@ -1,4 +1,5 @@
 #summary Shortest Path Algorithm description
+#labels Phase-Implementation,Featured
 =Shortest Path Algorithm=
 
 The implementation of Shortest path algorithm is based on Dijkstra's algorithm with some modifications for example it takes care of circular references or paths in a graph.
@@ -7,4 +8,4 @@ It finds all possible paths in a graph and generates a tree of path. When tree o
 
 In the implementation the graph is constructed from collection of Edges. Each Edge consists of two Vertices i.e. start vertex and end vertex. Each Edge has weight.
 
-The graph can be defined in a definition file. Please review graph.txt in source of shortestpathalgo.
+The graph can be defined in a definition file. Please review graph.txt in source of [http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2Fshortestpathalgo shortestpathalgo]
