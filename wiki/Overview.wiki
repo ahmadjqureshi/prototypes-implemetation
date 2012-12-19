@@ -5,4 +5,4 @@ The purpose this project is to implement and demonstrate path finding algorithms
 
 [shortestpathalgo Shortest Path Algorithm based on Dijkstra's algorithm]
 
-[AStarAlgorithm A(((*))) Algorithm]
+[AStarAlgorithm A* Algorithm]
