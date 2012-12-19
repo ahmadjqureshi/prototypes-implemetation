@@ -1,0 +1,13 @@
+#Description of A* Algorithm
+
+= A^*^ Algorithm =
+
+A^*^ Algorithm falls in the area of informed searching algorithms. It is an extension to Dijkstra's algorithm with some intelligence in order to make Path Finding more efficient.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
