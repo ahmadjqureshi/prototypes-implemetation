@@ -8,4 +8,4 @@ It finds all possible paths in a graph and generates a tree of path. When tree o
 
 In the implementation the graph is constructed from collection of Edges. Each Edge consists of two Vertices i.e. start vertex and end vertex. Each Edge has weight.
 
-The graph can be defined in a definition file. Please review graph.txt in [http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2Fshortestpathalgo source code.]
+The graph can be defined in a definition file. Please review graph.txt in [http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2Fshortestpathalgo the source code.]
