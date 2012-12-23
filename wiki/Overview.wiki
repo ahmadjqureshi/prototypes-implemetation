@@ -4,7 +4,7 @@
 
 The purpose this project is to implement and demonstrate path finding algorithms e.g. Dijkstra, A^*^, best first search etc. 
 
-An interesting application of path finding algorithms is in the board games like <TicTacToe>, Chess, etc.
+An interesting application of path finding algorithms is in the board games like Tic Tac Toe, Chess, etc.
 
 [shortestpathalgo Shortest Path Algorithm based on Dijkstra's algorithm]
 
