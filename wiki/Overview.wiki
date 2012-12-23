@@ -2,8 +2,10 @@
 #labels Featured,Phase-Support
 = Introduction =
 
-The purpose this project is to implement and demonstrate path finding algorithms e.g. Dijkstra, A^*^, best first search etc. It also contains an image processing project which was implemented for extraction of features from handwritten signatures digital images in banking industry.
+The purpose this project is to implement and demonstrate path finding algorithms e.g. Dijkstra, A^*^, best first search etc. 
 
 [shortestpathalgo Shortest Path Algorithm based on Dijkstra's algorithm]
 
 [AStarAlgorithm A* Algorithm]
+
+#It also contains an image processing project which was implemented for #extraction of features from handwritten signatures digital images in #banking industry.
