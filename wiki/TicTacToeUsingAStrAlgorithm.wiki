@@ -1,12 +1,8 @@
 #summary TicTacToe using A* algorithm.
+#labels Featured,Phase-Design,Phase-Deploy
 
 = Introduction =
 
-This project is focused on generating TicTacToe moves and calculating heuristics for each move, finally select the best move based on heuristics.
+This project is focused on generating TicTacToe moves and calculating heuristics for each move, finally select the best move based on heuristics i.e. the best move which leads to the winning state.
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
