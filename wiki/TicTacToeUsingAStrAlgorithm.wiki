@@ -5,4 +5,4 @@
 
 This project is focused on generating TicTacToe moves and calculating heuristics for each move, finally select the best move based on heuristics i.e. the best move which leads to the winning state.
 
-The msi can be downloaded from [here http://prototypes-implemetation.googlecode.com/files/TicTacToeSetup.msi]
+The msi can be downloaded from [http://prototypes-implemetation.googlecode.com/files/TicTacToeSetup.msi here]
