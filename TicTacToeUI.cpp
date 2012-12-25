@@ -1,5 +1,4 @@
-// TicTacToeUI.cpp : Defines the entry point for the application.
-//
+/*Main program*/
 
 #include "stdafx.h"
 #include "TicTacToeUI.h"
@@ -39,6 +38,7 @@ void				NextTurn(HWND hWnd, HINSTANCE hInstance, int controlId);
 Board				getBoard();
 void				setBoard( Board board);
 void				makeCPUMove();
+void				ResetGame();
 
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
@@ -353,7 +353,7 @@ void NextTurn(HWND hWnd, HINSTANCE hInstance, int controlId)
 		
 		if ( currentTurn == 1 )
 		{
-			sprintf( stringForTurn, "YourTurn !!");
+			sprintf( stringForTurn, "Your Turn !");
 		}
 
 		SendMessage(handles[controlId - 300], WM_SETTEXT, 2, (LPARAM) param);
@@ -434,7 +434,7 @@ void makeCPUMove()
 {
 	Moves		moves;
 	Board		board = getBoard();
-
+	int			msgBoxResult;
 	Node		rootNode( board );
 	Children	child[8];
 	Paths		paths;
@@ -450,18 +450,32 @@ void makeCPUMove()
 	
 	if ( i == 0 )
 	{
-		MessageBox( NULL, "No one wins!!!", "", MB_ICONINFORMATION);
-		exit(0);
-		return;
+		msgBoxResult = MessageBox( NULL, "No one wins!!! Do you want to start a new game", "", MB_YESNO);
+		if ( msgBoxResult == IDYES)
+		{
+			ResetGame();
+			return;
+		}
+		else
+		{
+			exit(0);
+		}
 	}
 
 	paths.findBestPaths( Player2, child, i, true, &winningPaths);
 
 	if (winningPaths.size() == 0)
 	{
-		MessageBox( NULL, "You win!!!", "", MB_ICONINFORMATION);
-		exit(0);
-		return;
+		msgBoxResult = MessageBox( NULL, "You win!!! Do you want to start a new game", "", MB_YESNO);
+		if ( msgBoxResult == IDYES)
+		{
+			ResetGame();
+			return;
+		}
+		else
+		{
+			exit(0);
+		}
 	}
 
 	Node node = winningPaths[0][1];
@@ -473,12 +487,48 @@ void makeCPUMove()
 
 	if ( nextMove.getWinningStatePlayer1())
 	{
-		MessageBox( NULL, "You win!!!", "", MB_ICONINFORMATION);
-		exit(0);
+		msgBoxResult = MessageBox( NULL, "You win!!! Do you want to start a new game", "", MB_YESNO);
+		if ( msgBoxResult == IDYES)
+		{
+			ResetGame();
+			return;
+		}
+		else
+		{
+			exit(0);
+		}
 	}
 	else if ( nextMove.getWinningStatePlayer2())
 	{
-		MessageBox( NULL, "I win!!!", "", MB_ICONINFORMATION);
-		exit(0);
+		msgBoxResult = MessageBox( NULL, "I win!!! Do you want to start a new game", "", MB_YESNO);
+		if ( msgBoxResult == IDYES)
+		{
+			ResetGame();
+			return;
+		}
+		else
+		{
+			exit(0);
+		}
 	}
+}
+
+void ResetGame()
+{
+	char param[5];
+	char stringForTurn[64];
+	
+	currentTurn = 1;
+	turns = 5;
+	param[0] = '\0';
+	for (int i = 0 ; i < 9 ; i++)
+	{
+		SendMessage(handles[i], WM_SETTEXT, 1, (LPARAM) param);
+	}
+
+	sprintf( stringForTurn, "Your Turn !");
+
+
+	SendMessage( turnHandle, WM_SETTEXT, strlen(stringForTurn) + 1, (LPARAM) stringForTurn);
+
 }
