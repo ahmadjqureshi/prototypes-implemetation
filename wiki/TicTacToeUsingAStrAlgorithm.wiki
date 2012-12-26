@@ -1,5 +1,5 @@
 #summary TicTacToe using A* algorithm.
-#labels Featured,Phase-Design,Phase-Deploy
+#labels Featured,Phase-Design
 
 = Tic Tac Toe using A^*^ Algorithm =
 
