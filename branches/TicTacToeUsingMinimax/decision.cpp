@@ -85,31 +85,60 @@ int Decision::findBestChild(vector<Node*> *closed, int closedIndex)
 
 	node = (*closed)[closedIndex];
 
+	
 	for ( i = 0 ; i < node->getChildrenByRef()->size() ; i++ )
 	{
-
-		if ( (*node->getChildrenByRef())[i]->getTurn() == Player1Turn )
+		if ( (*node->getChildrenByRef())[i]->getChildrenByRef()->size() == 0)
 		{
-			//Look for lowest Min node
-			if ((*node->getChildrenByRef())[i]->getBoard().getPlayer1Heuristics() <= node->m_bestHeuristics )
+			if ( (*node->getChildrenByRef())[i]->getTurn() == Player1Turn )
 			{
-				node->m_bestHeuristics = (*node->getChildrenByRef())[i]->getBoard().getPlayer1Heuristics();
-				index = i;
+				//Look for lowest Min node
+				if ((*node->getChildrenByRef())[i]->getBoard().getPlayer1Heuristics() <= node->m_bestHeuristics )
+				{
+					node->m_bestHeuristics = (*node->getChildrenByRef())[i]->getBoard().getPlayer1Heuristics();
+					index = i;
+				}
+			}
+
+			if ( (*node->getChildrenByRef())[i]->getTurn() == Player2Turn )
+			{
+				//Look for highest Max node
+				if ((*node->getChildrenByRef())[i]->getBoard().getPlayer2Heuristics() >= node->m_bestHeuristics )
+				{
+					node->m_bestHeuristics = (*node->getChildrenByRef())[i]->getBoard().getPlayer2Heuristics();
+					index = i;
+				}
 			}
 		}
-
-		if ( (*node->getChildrenByRef())[i]->getTurn() == Player2Turn )
+		else
 		{
-			//Look for highest Max node
-			if ((*node->getChildrenByRef())[i]->getBoard().getPlayer2Heuristics() >= node->m_bestHeuristics )
+			if ( (*node->getChildrenByRef())[i]->getTurn() == Player1Turn )
 			{
-				node->m_bestHeuristics = (*node->getChildrenByRef())[i]->getBoard().getPlayer2Heuristics();
-				index = i;
+				//Look for lowest Min node
+				if ((*node->getChildrenByRef())[i]->m_bestHeuristics <= node->m_bestHeuristics )
+				{
+					node->m_bestHeuristics = (*node->getChildrenByRef())[i]->m_bestHeuristics;
+					index = i;
+				}
+			}
+
+			if ( (*node->getChildrenByRef())[i]->getTurn() == Player2Turn )
+			{
+				//Look for highest Max node
+				if ((*node->getChildrenByRef())[i]->m_bestHeuristics >= node->m_bestHeuristics )
+				{
+					node->m_bestHeuristics = (*node->getChildrenByRef())[i]->m_bestHeuristics;
+					index = i;
+				}
 			}
 		}
-
 	}
 
+	//Unable to find best then just choose first
+	if ( index == -1 && node->getChildrenByRef()->size() > 0)
+	{
+		index =0;
+	}
 	node->m_indexOfBestChild = index;
 
 	//try pruning here
