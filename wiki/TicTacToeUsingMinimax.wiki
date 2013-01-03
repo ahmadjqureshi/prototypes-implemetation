@@ -1,6 +1,6 @@
 #summary TicTacToeUsingMinimax.
 
-= TicTacToe Implementation using Minimax and alpha beta pruning =
+= Tic Tac Toe Implementation using Minimax and alpha beta pruning =
 
 Minimax algorithm finds out best move from a partial or complete game tree using depth first search. In this case we have 5 moves look ahead game tree on every move i.e. we do not generate whole game tree in start. Minimax is a recursive algorithm but we have done a non recursive implementation in order make it more performance efficient.
 
