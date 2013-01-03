@@ -34,7 +34,7 @@ An implementation of A^*^ algorithm can be found [http://code.google.com/p/proto
 
 = Tic Tac Toe using A^*^ Algorithm =
 
-This project is focused on generating Tic Tac Toe moves and calculating heuristics for each move, finally select the best move based on heuristics i.e. the best move which leads to the winning state.
+The focus was on generating Tic Tac Toe moves and calculating heuristics for each move, finally select the best move based on heuristics i.e. the best move which leads to the winning state.
 
 The source code for this program can be downloaded from [http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2FTicTacToeBasedonAStar here]
 
