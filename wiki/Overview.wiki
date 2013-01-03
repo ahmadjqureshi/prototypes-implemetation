@@ -49,7 +49,7 @@ Minimax algorithm finds out best move from a partial or complete game tree using
 
 In our implementation every move has two heuristic values one for Player1 (always negative values) and other for Player2 (always positive values). Player1 is considered as Min and Player2 is considered as Max. On Min move we select minimum heuristic move. On Max move select maximum heuristic move. 
 
-Now next step is to perform alpha beta pruning. Alpha Beta pruning helps to reduce the search tree by discarding the uninteresting moves from search tree. Simple rule for pruning is that if Child move has worse heuristics then parent move then there is no need to search children of that child, just jump over that node.
+Now next step is to perform alpha beta pruning. Alpha Beta pruning helps to reduce the search tree by discarding the uninteresting moves from search tree. Simple rule for pruning is that if Child move has worse heuristics than parent move then there is no need to search children of that child move, just jump over that node.
 
 The Alpha Beta pruning will be performed with positive heuristics. The negative heuristics of Player1 will be converted to positive temporarily just for calculation.
 
