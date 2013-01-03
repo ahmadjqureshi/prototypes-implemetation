@@ -16,3 +16,5 @@ In Alpha pruning if parent heuristics of player1 are greater or equal to child h
 In Beta pruning if parent heuristics of player1 are less or equal to child heuristics of Player2 then we should skip that move, it is not interesting.
 
 The Source Code for Minimax and alpha beta pruning can be found [http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2FTicTacToeUsingMinimax here]
+
+The msi kit for Tic Tac Toe can be downloaded from [http://prototypes-implemetation.googlecode.com/files/TicTacToe%20using%20Minimax%20algo.msi here]
