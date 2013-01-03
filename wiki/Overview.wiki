@@ -45,12 +45,11 @@ A^*^ is not a very suitable algorithm for board games but still the purpose was 
 
 = Tic Tac Toe based on Minimax and alpha beta pruning =
 
-Minimax algorithm finds out best move from a partial or complete game tree using depth first search. In this case we have 5 moves look ahead game tree on every move i.e. we do not generate whole game tree in start. Minimax is a recursive algorithm but we have done a non recursive implementation in order make it more performance efficient.
-
+Minimax algorithm finds out best move from a partial or complete game tree using depth first search. In this case we have 5 moves look ahead game tree on every move i.e. we do not generate whole game tree. Minimax is a recursive algorithm but we have done a non recursive implementation in order to make it more performance efficient.
 
 In our implementation every move has two heuristic values one for Player1 (always negative values) and other for Player2 (always positive values). Player1 is considered as Min and Player2 is considered as Max. On Min move we select minimum heuristic move. On Max move select maximum heuristic move. 
 
-Now next step is to perform alpha beta pruning. Alpha Beta pruning helps to reduce the search tree by discarding the uninteresting moves from search. Simple rule for pruning is that if Child move has worse heuristics then parent move then there is no need to search children of that child, just jump over that node.
+Now next step is to perform alpha beta pruning. Alpha Beta pruning helps to reduce the search tree by discarding the uninteresting moves from search tree. Simple rule for pruning is that if Child move has worse heuristics then parent move then there is no need to search children of that child, just jump over that node.
 
 The Alpha Beta pruning will be performed with positive heuristics. The negative heuristics of Player1 will be converted to positive temporarily just for calculation.
 
