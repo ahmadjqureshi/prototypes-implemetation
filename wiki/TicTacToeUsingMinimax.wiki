@@ -1,6 +1,6 @@
 #summary TicTacToeUsingMinimax.
 
-= Tic Tac Toe Implementation using Minimax and alpha beta pruning =
+= Tic Tac Toe based on Minimax and alpha beta pruning =
 
 Minimax algorithm finds out best move from a partial or complete game tree using depth first search. In this case we have 5 moves look ahead game tree on every move i.e. we do not generate whole game tree in start. Minimax is a recursive algorithm but we have done a non recursive implementation in order make it more performance efficient.
 
@@ -14,3 +14,5 @@ The Alpha Beta pruning will be performed with positive heuristics. The negative 
 In Alpha pruning if parent heuristics of player1 are greater or equal to child heuristics of Player2 then we should skip that move, it is not interesting.
 
 In Beta pruning if parent heuristics of player1 are less or equal to child heuristics of Player2 then we should skip that move, it is not interesting.
+
+The Source Code for Minimax and alpha beta pruning can be found [http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2FTicTacToeUsingMinimax here]
