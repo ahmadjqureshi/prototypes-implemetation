@@ -42,6 +42,7 @@ The msi can be downloaded from [http://prototypes-implemetation.googlecode.com/f
 
 A^*^ is not a very suitable algorithm for board games but still the purpose was investigate if can be used. Suitable algorithm for board games of 2 players are Minimax algorithm, alpha beta pruning. We have implementaed Minimax and alpha beta pruning algorithms in next section.
 
+
 = Tic Tac Toe based on Minimax and alpha beta pruning =
 
 Minimax algorithm finds out best move from a partial or complete game tree using depth first search. In this case we have 5 moves look ahead game tree on every move i.e. we do not generate whole game tree in start. Minimax is a recursive algorithm but we have done a non recursive implementation in order make it more performance efficient.
