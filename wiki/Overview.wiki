@@ -26,7 +26,6 @@ Lets assume f(n) a function which gives shortest estimated path to goal node thr
 f(n) = g(n) + h(n)
 
 g(n) is a function that provides the cost to reach node n,
-
 h(n) is a function that provides the heuristic value from node n to goal
 
 A^*^ is an extended version of Shortest path algorithm with addition of heuristic function h(n)
