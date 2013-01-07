@@ -8,7 +8,7 @@ An interesting application of path finding algorithms is in the board games like
 
 =Shortest Path Algorithm=
 
-The implementation of Shortest path algorithm is based on Dijkstra's algorithm with some modifications e.g. it takes care of circular references or paths in a graph.
+The implementation of Shortest path algorithm is based on Dijkstra's algorithm with some modifications e.g. it takes care of circular references or circular paths in a graph.
 
 It finds all possible paths in a graph and generates a tree of path. When tree of all paths is created then it is possible to do a bottom up traversal to get all paths.
 
