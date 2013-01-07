@@ -41,7 +41,7 @@ The source code for this program can be downloaded from [http://code.google.com/
 
 The msi can be downloaded from [http://prototypes-implemetation.googlecode.com/files/TicTacToeSetup.msi here]
 
-A^*^ is not a very suitable algorithm for board games but still the purpose is to investigate if it can be used. Suitable algorithm for board games of 2 players are Minimax algorithm, alpha beta pruning. We have implementaed Minimax and alpha beta pruning algorithms in next section.
+A^*^ is not a very suitable algorithm for board games but still the purpose is to investigate if it can be used. Suitable algorithms for board games of 2 players are e.g. Minimax algorithm, alpha beta pruning. We have implemented Minimax and alpha beta pruning algorithms in next section.
 
 
 = Tic Tac Toe based on Minimax and alpha beta pruning =
