@@ -1,5 +1,5 @@
 #summary Overview of this project
-#labels Featured,Phase-Support,Phase-Implementation
+#labels Featured,Phase-Support,Phase-Implementation,Minimax,Alphabetapruning,A,Dijkstra,Shortest,Path
 = Introduction =
 
 The purpose this project is to implement and demonstrate path finding algorithms e.g. Dijkstra, A^*^, best first search etc. 
