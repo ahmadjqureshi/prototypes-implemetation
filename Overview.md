@@ -1,0 +1,61 @@
+# Introduction #
+
+The purpose this project is to implement and demonstrate path finding algorithms e.g. Dijkstra, A<sup>*</sup>, best first search etc.
+
+An interesting application of path finding algorithms is in the board games like Tic Tac Toe, Chess, etc.
+
+# Shortest Path Algorithm #
+
+The implementation of Shortest path algorithm is based on Dijkstra's algorithm with some modifications e.g. it takes care of circular references or circular paths in a graph.
+
+It finds all possible paths in a graph and generates a tree of path. When tree of all paths is created then it is possible to do a bottom up traversal to get all paths.
+
+In the implementation the graph is constructed from collection of Edges. Each Edge consists of two Vertices i.e. start vertex and end vertex. Each Edge has weight.
+
+The graph can be defined in a definition file. Please review graph.txt in [the source code.](http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2Fshortestpathalgo)
+
+
+# A<sup>*</sup> Algorithm #
+
+A<sup>*</sup> Algorithm falls in the area of informed searching algorithms. It is an extension to Dijkstra's algorithm with some intelligence in order to make Path Finding more efficient.
+
+Lets assume f(n) a function which gives shortest estimated path to goal node through node n then:
+
+f(n) = g(n) + h(n)
+
+**g(n) is a function that provides the cost to reach node n,**
+
+**h(n) is a function that provides the heuristic value from node n to goal**
+
+A<sup>*</sup> is an extended version of Shortest path algorithm with addition of heuristic function h(n)
+
+An implementation of A<sup>*</sup> algorithm can be found [here](http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2FA*%20Algorithm%253Fstate%253Dclosed)
+
+# Tic Tac Toe using A<sup>*</sup> Algorithm #
+
+The focus was on generating Tic Tac Toe moves and calculating heuristics for each move, finally select the best move based on heuristics i.e. the best move which leads to the winning state.
+
+The source code for this program can be downloaded from [here](http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2FTicTacToeBasedonAStar)
+
+The msi can be downloaded from [here](http://prototypes-implemetation.googlecode.com/files/TicTacToeSetup.msi)
+
+A<sup>*</sup> is not a very suitable algorithm for board games but still the purpose is to investigate if it can be used. Suitable algorithms for board games of 2 players are e.g. Minimax algorithm, alpha beta pruning. We have implemented Minimax and alpha beta pruning algorithms in next section.
+
+
+# Tic Tac Toe based on Minimax and alpha beta pruning #
+
+Minimax algorithm finds out best move from a partial or complete game tree using depth first search. In this case we have 5 moves look ahead game tree on every move i.e. we do not generate whole game tree. Minimax is a recursive algorithm but we have done a non recursive implementation in order to make it more performance efficient.
+
+In our implementation every move has two heuristic values one for Player1 (always negative values) and other for Player2 (always positive values). Player1 is considered as Min and Player2 is considered as Max. On Min move we select minimum heuristic move. On Max move select maximum heuristic move.
+
+Now next step is to perform alpha beta pruning. Alpha Beta pruning helps to reduce the search tree by discarding the uninteresting moves from search tree. Simple rule for pruning is that if Child move has worse heuristics than parent move then there is no need to search children of that child move, just jump over that node.
+
+The Alpha Beta pruning will be performed with positive heuristics. The negative heuristics of Player1 will be converted to positive temporarily just for calculation.
+
+In Alpha pruning if parent heuristics of player1 are greater or equal to child heuristics of Player2 then we should skip that move, it is not interesting.
+
+In Beta pruning if parent heuristics of player1 are less or equal to child heuristics of Player2 then we should skip that move, it is not interesting.
+
+The Source Code for Minimax and alpha beta pruning can be found [here](http://code.google.com/p/prototypes-implemetation/source/browse/#svn%2Fbranches%2FTicTacToeUsingMinimax)
+
+The msi kit for Tic Tac Toe can be downloaded from [here](http://prototypes-implemetation.googlecode.com/files/TicTacToe%20using%20Minimax%20algo.msi)

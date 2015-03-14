@@ -1,0 +1,15 @@
+# Supervised learning: Document classification using Support Vector Machines. #
+
+In this project document classification is performed using Support Vector Machines on Reuters-21578 data set. RBF kernel was used for prediction, the values of C and gamma parameters were identified using cross-validation. The precision, recall and F-Measure were calculated to evaluate results, overall performance was promising.
+
+# Results #
+
+Following are the Precision, recall and F-Measure for documents classification of some categories in Reuter-21578 dataset.
+
+| **Category** | **Precision** | **Recall** | **F-Measure** |
+|:-------------|:--------------|:-----------|:--------------|
+| **acq** | 89.6% | 78.1% | 83.5% |
+| **cocoa** | 95.6% | 86.8% | 90.9% |
+| **coffee** | 95.3% | 84.8% | 89.7% |
+| **earn** | 99.4% | 78.9% | 87.9% |
+| **gold** | 76.6% | 89.6% | 82.5% |
